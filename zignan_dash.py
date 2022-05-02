@@ -3,6 +3,7 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 
+
 search = st.sidebar.radio("HOME",('home','about'))
 
 col1,col2,col3=st.columns([4,5,3])
@@ -17,5 +18,5 @@ idd='1bsWbyZbw0nZzH5XwwjTB3l88gZBhKE1WQ_iDDk1IaWs'
 #idd1=st.sidebar.text_input("ENTER THE Sheet ID",'1bsWbyZbw0nZzH5XwwjTB3l88gZBhKE1WQ_iDDk1IaWs')
 df=pd.read_csv(f"https://docs.google.com/spreadsheets/d/{idd}/export?format=csv")
 st.dataframe(df)
-
+st.bar_chart(df['Fuel Type'])
 
