@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-
+import seaborn as sns
 
 search = st.sidebar.radio("HOME",('home','about'))
 
