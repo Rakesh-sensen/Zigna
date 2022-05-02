@@ -17,5 +17,8 @@ idd='1bsWbyZbw0nZzH5XwwjTB3l88gZBhKE1WQ_iDDk1IaWs'
 #idd1=st.sidebar.text_input("ENTER THE Sheet ID",'1bsWbyZbw0nZzH5XwwjTB3l88gZBhKE1WQ_iDDk1IaWs')
 df=pd.read_csv(f"https://docs.google.com/spreadsheets/d/{idd}/export?format=csv")
 st.dataframe(df)
-st.bar_chart(df['Fuel Type'])
+df1=pd.DataFrame(df[:],columns=['Price in INR'])
+df1.hist()
+st.bar_chart(df['Fuel Type','Price in INR'])
+
 
