@@ -18,6 +18,6 @@ idd='1bsWbyZbw0nZzH5XwwjTB3l88gZBhKE1WQ_iDDk1IaWs'
 df=pd.read_csv(f"https://docs.google.com/spreadsheets/d/{idd}/export?format=csv")
 st.dataframe(df)
 df1=pd.DataFrame(df[:],columns=['Price in INR'])
-st.bar_chart(df['Fuel Type','Price in INR'])
+st.bar_chart('Fuel Type','Price in INR')
 
 
