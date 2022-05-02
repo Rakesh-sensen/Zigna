@@ -19,3 +19,11 @@ df=pd.read_csv(f"https://docs.google.com/spreadsheets/d/{idd}/export?format=csv"
 st.dataframe(df)
 st.bar_chart(df['Fuel Type'])
 
+import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+st.pyplot(fig)
